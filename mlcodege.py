@@ -10,7 +10,7 @@ from smolagents import CodeAgent, DuckDuckGoSearchTool, LiteLLMModel
 # Configure your API key in the environment; never hard-code secrets here.
 import os
 
-api_key = "AIzaSyDd28a4fuS6QWH01Sx6EXVMMcM3MXhHgSo"  # Replace with your actual Google API key
+api_key = os.getenv("GOOGLE_API_KEY")
 
 if not api_key:
     raise ValueError(
